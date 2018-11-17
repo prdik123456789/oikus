@@ -8,12 +8,12 @@ pipeline {
     }
     stage('StopServers') {
       parallel {
-        stage('StopServer - crmpao01') {
+        stage('crmpao01') {
           steps {
             sh 'ssh crmpao01 /srv/bin.../restart_servers.ksh'
           }
         }
-        stage('stopServer crmpao02') {
+        stage('crmpao02') {
           steps {
             sh 'ssh crmpao02 /srv/.../restart_servers.ksh'
           }
