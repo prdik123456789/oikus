@@ -6,7 +6,7 @@ pipeline {
         sh 'crontab -l'
       }
     }
-    stage('StopServer - crmpao01') {
+    stage('StopServers') {
       parallel {
         stage('StopServer - crmpao01') {
           steps {
